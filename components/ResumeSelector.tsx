@@ -1,0 +1,105 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Download, Users, Code, Layout } from "lucide-react";
+
+const resumes = [
+  {
+    icon: Users,
+    title: "Engineering Manager",
+    description: "Leadership-focused resume highlighting team management, hiring, and technical strategy",
+    highlights: [
+      "Led team of 7 engineers",
+      "25% velocity improvement",
+      "95% cost reduction initiatives",
+      "Zero attrition rate",
+    ],
+    filename: "Emmanuel_Yupit_Engineering_Manager.pdf",
+  },
+  {
+    icon: Code,
+    title: "Full-Stack Engineer",
+    description: "Technical depth across frontend, backend, and infrastructure with scale metrics",
+    highlights: [
+      "React, Node.js, TypeScript",
+      "150k+ active users",
+      "$20M ARR systems",
+      "Event-driven architecture",
+    ],
+    filename: "Emmanuel_Yupit_Full_Stack.pdf",
+  },
+  {
+    icon: Layout,
+    title: "Frontend Engineer",
+    description: "UI/UX focused resume emphasizing React expertise and frontend architecture",
+    highlights: [
+      "React, Next.js, Vite",
+      "Micro-frontends",
+      "Performance optimization",
+      "Component libraries",
+    ],
+    filename: "Emmanuel_Yupit_Frontend.pdf",
+  },
+];
+
+export function ResumeSelector() {
+  return (
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {resumes.map((resume, index) => (
+          <motion.div
+            key={resume.title}
+            className="p-8 rounded-2xl border border-border bg-background hover:border-primary/50 hover:shadow-lg transition-all group"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <resume.icon className="w-6 h-6 text-primary" />
+            </div>
+
+            <h3 className="text-xl font-bold mb-3">{resume.title}</h3>
+            <p className="text-muted mb-6">{resume.description}</p>
+
+            <ul className="space-y-2 mb-6">
+              {resume.highlights.map((highlight) => (
+                <li key={highlight} className="flex items-center gap-2 text-sm">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              onClick={() => alert(`Download ${resume.filename}\n\nNote: PDF files need to be added to /public folder`)}
+              className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all hover:scale-105"
+            >
+              <Download className="mr-2 w-5 h-5" />
+              Download PDF
+            </button>
+          </motion.div>
+        ))}
+      </div>
+
+      <motion.div
+        className="p-8 rounded-2xl border border-border bg-gradient-to-br from-accent/5 to-primary/5"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <h3 className="text-2xl font-bold mb-4">Need a Custom Resume?</h3>
+        <p className="text-muted mb-6">
+          Have a specific job description? I can tailor my resume to highlight the most relevant experience and skills for your role.
+        </p>
+        <a
+          href="/contact"
+          className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors"
+        >
+          Get in Touch →
+        </a>
+      </motion.div>
+    </div>
+  );
+}
