@@ -9,7 +9,7 @@ const experience = [
     location: 'United States (Remote)',
     period: 'Jun 2024 - Present',
     description:
-      'Lead team of 7 engineers responsible for consumer-facing and revenue-impacting services. Started as contractor while at EPAM (Jun-Aug 2024), successfully managing both roles with full satisfaction from both companies.',
+      'Lead team of 7 engineers responsible for consumer-facing and revenue-impacting services. Started as contractor while at EPAM (Jun 2024-Aug 2025), successfully managing both roles with full satisfaction from both companies.',
     achievements: [
       'Architected distributed backend systems processing 500 candidates/day using Node.js, TypeScript, and AWS SQS, maintaining 99.9% uptime while scaling to 150k active users',
       'Built internal feature flag platform (React micro-frontends + AWS) replacing LaunchDarkly, reducing costs by 95% ($50k/year savings)',
@@ -23,9 +23,9 @@ const experience = [
     title: 'Senior Software Engineer',
     company: 'EPAM Systems',
     location: 'Mexico (Remote)',
-    period: 'May 2022 - Aug 2024',
+    period: 'May 2022 - Aug 2025',
     description:
-      'Delivered backend systems for large-scale consumer applications with millions of users. Note: Jun-Aug 2024 overlapped with Vetted Health contractor work.',
+      'Delivered backend systems for large-scale consumer applications with millions of users. Note: Jun 2024-Aug 2025 overlapped with Vetted Health contractor work.',
     achievements: [
       'Designed and optimized core booking flow APIs handling 100k+ daily requests, reducing checkout latency by 40% (800ms → 480ms)',
       'Built frontend platforms and middleware enabling faster configuration and delivery of promotions using Kotlin + GraphQL',

@@ -65,7 +65,7 @@ const caseStudies = [
     icon: TrendingDown,
     title: 'Infrastructure Cost Optimization',
     company: 'EPAM Systems',
-    period: '2022-2024',
+    period: '2022-2025',
     challenge:
       'High AWS costs and inefficient resource utilization across multiple services.',
     solution:
