@@ -7,7 +7,7 @@ const caseStudies = [
   {
     icon: Brain,
     title: 'AI-Powered Candidate Screening',
-    company: 'Vetted Health',
+    company: 'Vetted Health (Contractor)',
     period: '2024',
     challenge:
       "Manual candidate screening couldn't scale. Needed AI system to process 500+ candidates daily while maintaining quality and personalized engagement.",
@@ -30,7 +30,7 @@ const caseStudies = [
   {
     icon: MessageSquare,
     title: 'AI-Enhanced Messaging Platform',
-    company: 'Vetted Health',
+    company: 'Vetted Health (Contractor)',
     period: '2024',
     challenge:
       "Manual candidate engagement couldn't scale. Needed automated workflows with AI-powered sentiment analysis for 500+ daily qualified candidates.",
@@ -47,7 +47,7 @@ const caseStudies = [
   {
     icon: Users,
     title: 'Engineering Team Growth',
-    company: 'Vetted Health',
+    company: 'Vetted Health (Contractor)',
     period: '2024-Present',
     challenge:
       'Rapid growth required scaling team while maintaining quality and velocity.',

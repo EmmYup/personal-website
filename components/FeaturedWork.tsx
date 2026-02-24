@@ -8,7 +8,7 @@ const projects = [
   {
     icon: MessageSquare,
     title: 'Real-time Messaging & Automation',
-    company: 'Vetted Health',
+    company: 'Vetted Health (Contractor)',
     description:
       'Designed event-driven messaging platform handling 500 qualified candidates/day with automated engagement pipelines. Integrated OpenAI API for intelligent candidate screening and sentiment analysis to enhance automation.',
     impact: ['500 candidates/day', '150k active users', '99.9% uptime'],
@@ -17,7 +17,7 @@ const projects = [
   {
     icon: Flag,
     title: 'Feature Flag Platform',
-    company: 'Vetted Health',
+    company: 'Vetted Health (Contractor)',
     description:
       'Built internal feature flag system replacing LaunchDarkly, reducing costs by 95% ($50k/year) while improving reliability and deployment speed. Used AI tools (Claude, Windsurf) to accelerate development.',
     impact: ['95% cost reduction', 'Zero downtime', '15min deployments'],
