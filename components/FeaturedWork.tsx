@@ -25,7 +25,7 @@ const projects = [
   },
   {
     icon: Activity,
-    title: 'Vetria - Veterinary Software',
+    title: 'MentiVet - Veterinary Software',
     company: 'Personal Project',
     description:
       'Building clinical note-taking and decision support system for veterinarians. Leveraging AI tools (OpenAI API, Claude) for intelligent note generation and medical knowledge search. Full-stack development with React and FastAPI.',
