@@ -26,11 +26,12 @@ const projects = [
   {
     icon: Activity,
     title: 'MentiVet - Veterinary Software',
-    company: 'Personal Project',
+    company: 'Personal Project - Production',
     description:
-      'Building clinical note-taking and decision support system for veterinarians. Leveraging AI tools (OpenAI API, Claude) for intelligent note generation and medical knowledge search. Full-stack development with React and FastAPI.',
-    impact: ['AI-assisted notes', 'Clinical workflows', 'In development'],
-    tags: ['React', 'FastAPI', 'PostgreSQL', 'AI-enhanced'],
+      'Live clinical note-taking and decision support system serving veterinarians at mentivet.com. Leveraging AI tools (OpenAI API, Claude) for intelligent note generation and medical knowledge search. Full-stack development with React and FastAPI.',
+    impact: ['AI-assisted notes', 'Clinical workflows', 'In production'],
+    tags: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'OpenAI API'],
+    link: 'https://mentivet.com',
   },
 ];
 
