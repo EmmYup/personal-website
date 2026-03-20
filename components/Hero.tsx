@@ -17,7 +17,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-syne)] mb-6 leading-tight'>
+            <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight'>
               Engineering Manager{' '}
               <span className='text-primary'>Building Scalable Systems</span>
             </h1>

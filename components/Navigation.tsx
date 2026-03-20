@@ -38,7 +38,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-xl font-bold font-[family-name:var(--font-syne)] hover:text-primary transition-colors"
+            className="text-xl font-bold font-heading hover:text-primary transition-colors"
           >
             Emmanuel Yupit
           </Link>

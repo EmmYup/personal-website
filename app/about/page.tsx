@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl font-bold font-[family-name:var(--font-syne)] mb-12">
+        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12">
           About Me
         </h1>
         <AboutContent />

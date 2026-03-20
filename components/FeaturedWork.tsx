@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageSquare, Flag, Activity } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
+import { IconBadge } from '@/components/ui/IconBadge';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const projects = [
   {
@@ -39,63 +42,51 @@ export function FeaturedWork() {
   return (
     <section className='py-20 bg-background'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <motion.div
-          className='text-center mb-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className='text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-4'>
-            Featured Work
-          </h2>
-          <p className='text-lg text-muted max-w-2xl mx-auto'>
-            Recent projects demonstrating technical leadership and business
-            impact
-          </p>
-        </motion.div>
+        <SectionHeading
+          title='Featured Work'
+          description='Recent projects demonstrating technical leadership and business impact'
+        />
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12'>
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className='p-8 rounded-2xl border border-border bg-background hover:border-primary/50 hover:shadow-xl transition-all group'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors'>
-                <project.icon className='w-6 h-6 text-primary' />
-              </div>
+              <Card hover group className='h-full'>
+                <IconBadge icon={project.icon} groupHover className='mb-6' />
 
-              <h3 className='text-xl font-bold mb-2'>{project.title}</h3>
-              <p className='text-sm text-primary mb-4'>{project.company}</p>
-              <p className='text-muted mb-6'>{project.description}</p>
+                <h3 className='text-xl font-bold mb-2'>{project.title}</h3>
+                <p className='text-sm text-primary mb-4'>{project.company}</p>
+                <p className='text-muted mb-6'>{project.description}</p>
 
-              <div className='space-y-4'>
-                <div className='flex flex-wrap gap-2'>
-                  {project.impact.map((item) => (
-                    <span
-                      key={item}
-                      className='px-3 py-1 text-xs font-medium bg-success/10 text-success rounded-full'
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className='space-y-4'>
+                  <div className='flex flex-wrap gap-2'>
+                    {project.impact.map((item) => (
+                      <span
+                        key={item}
+                        className='px-3 py-1 text-xs font-medium bg-success/10 text-success rounded-full'
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className='flex flex-wrap gap-2'>
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className='px-3 py-1 text-xs font-medium bg-border text-muted rounded-full'
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <div className='flex flex-wrap gap-2'>
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className='px-3 py-1 text-xs font-medium bg-border text-muted rounded-full'
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </Card>
             </motion.div>
           ))}
         </div>

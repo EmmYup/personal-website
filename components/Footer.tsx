@@ -10,7 +10,7 @@ export function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {/* Brand */}
           <div>
-            <h3 className='text-lg font-bold font-[family-name:var(--font-syne)] mb-4'>
+            <h3 className='text-lg font-bold font-heading mb-4'>
               Emmanuel Yupit
             </h3>
             <p className='text-sm text-muted'>

@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
+import { IconBadge } from '@/components/ui/IconBadge';
 
 export function ContactForm() {
   return (
@@ -18,9 +20,7 @@ export function ContactForm() {
             href='mailto:e.pyupit@gmail.com'
             className='flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all group'
           >
-            <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors'>
-              <Mail className='w-6 h-6 text-primary' />
-            </div>
+            <IconBadge icon={Mail} groupHover />
             <div>
               <p className='font-semibold'>Email</p>
               <p className='text-muted'>e.pyupit@gmail.com</p>
@@ -33,9 +33,7 @@ export function ContactForm() {
             rel='noopener noreferrer'
             className='flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all group'
           >
-            <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors'>
-              <Linkedin className='w-6 h-6 text-primary' />
-            </div>
+            <IconBadge icon={Linkedin} groupHover />
             <div>
               <p className='font-semibold'>LinkedIn</p>
               <p className='text-muted'>linkedin.com/in/emmanuelpyupit</p>
@@ -48,9 +46,7 @@ export function ContactForm() {
             rel='noopener noreferrer'
             className='flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all group'
           >
-            <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors'>
-              <Github className='w-6 h-6 text-primary' />
-            </div>
+            <IconBadge icon={Github} groupHover />
             <div>
               <p className='font-semibold'>GitHub</p>
               <p className='text-muted'>github.com/EmmYup</p>
@@ -58,9 +54,7 @@ export function ContactForm() {
           </a>
 
           <div className='flex items-center gap-4 p-4 rounded-lg border border-border'>
-            <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center'>
-              <MapPin className='w-6 h-6 text-primary' />
-            </div>
+            <IconBadge icon={MapPin} />
             <div>
               <p className='font-semibold'>Location</p>
               <p className='text-muted'>Mexico • Open to Remote / Relocation</p>
@@ -68,18 +62,20 @@ export function ContactForm() {
           </div>
         </div>
 
-        <div className='mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border'>
-          <h3 className='font-bold mb-3'>Availability</h3>
-          <p className='text-muted mb-4'>
-            Currently employed at Vetted Health but open to new opportunities. I
-            typically respond within 24 hours.
-          </p>
-          <div className='flex items-center gap-2'>
-            <div className='w-2 h-2 bg-success rounded-full animate-pulse' />
-            <span className='text-sm text-success font-medium'>
-              Available for interviews
-            </span>
-          </div>
+        <div className='mt-8'>
+          <Card className='bg-gradient-to-br from-primary/5 to-accent/5'>
+            <h3 className='font-bold mb-3'>Availability</h3>
+            <p className='text-muted mb-4'>
+              Currently employed at Vetted Health but open to new opportunities.
+              I typically respond within 24 hours.
+            </p>
+            <div className='flex items-center gap-2'>
+              <div className='w-2 h-2 bg-success rounded-full animate-pulse' />
+              <span className='text-sm text-success font-medium'>
+                Available for interviews
+              </span>
+            </div>
+          </Card>
         </div>
       </motion.div>
 
@@ -90,7 +86,7 @@ export function ContactForm() {
       >
         <h2 className='text-2xl font-bold mb-6'>Quick Message</h2>
 
-        <div className='p-8 rounded-2xl border border-border bg-background'>
+        <Card>
           <p className='text-muted mb-6'>
             For the fastest response, please email me directly at{' '}
             <a
@@ -117,7 +113,7 @@ export function ContactForm() {
               <ul className='space-y-2 text-sm text-muted'>
                 <li className='flex items-start gap-2'>
                   <span className='text-primary mt-1'>•</span>
-                  <span>Company name and role you're hiring for</span>
+                  <span>Company name and role you&apos;re hiring for</span>
                 </li>
                 <li className='flex items-start gap-2'>
                   <span className='text-primary mt-1'>•</span>
@@ -135,7 +131,7 @@ export function ContactForm() {
             </div>
 
             <div className='pt-4 border-t border-border'>
-              <h4 className='font-semibold mb-2'>Roles I'm Interested In:</h4>
+              <h4 className='font-semibold mb-2'>Roles I&apos;m Interested In:</h4>
               <div className='flex flex-wrap gap-2'>
                 {[
                   'Engineering Manager',
@@ -153,7 +149,7 @@ export function ContactForm() {
               </div>
             </div>
           </div>
-        </div>
+        </Card>
       </motion.div>
     </div>
   );

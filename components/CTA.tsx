@@ -9,7 +9,7 @@ export function CTA() {
     <section className='py-20 bg-background'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <motion.div
-          className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-dark p-12 md:p-16 text-white'
+          className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-dark to-[#003a8c] p-12 md:p-16 text-white'
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -22,13 +22,13 @@ export function CTA() {
           </div>
 
           <div className='relative z-10 max-w-3xl'>
-            <h2 className='text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-4'>
-              Let's Build Something Great Together
+            <h2 className='text-3xl sm:text-4xl font-bold font-heading mb-4'>
+              Let&apos;s Build Something Great Together
             </h2>
-            <p className='text-lg text-white/90 mb-8'>
-              I'm open to Engineering Manager, Tech Lead, Senior Sofware
-              Engineer, and Founding Engineer roles. If you're building
-              something ambitious, let's talk.
+            <p className='text-lg text-white mb-8'>
+              I&apos;m open to Engineering Manager, Tech Lead, Senior Software
+              Engineer, and Founding Engineer roles. If you&apos;re building
+              something ambitious, let&apos;s talk.
             </p>
 
             <div className='flex flex-col sm:flex-row gap-4 mb-8'>

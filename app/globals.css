@@ -6,7 +6,7 @@
   --primary: #0066ff;
   --primary-dark: #0052cc;
   --accent: #00d9ff;
-  --success: #00c853;
+  --success: #1a8f45;
   --muted: #64748b;
   --border: #e2e8f0;
 }
@@ -22,12 +22,15 @@
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-syne);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a1628;
     --foreground: #f8fafc;
+    --primary: #4d9fff;
+    --muted: #94a3b8;
     --border: #1e293b;
   }
 }

@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { Zap, Code, Users } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
+import { IconBadge } from '@/components/ui/IconBadge';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const valueProps = [
   {
@@ -31,49 +34,37 @@ export function ValueProps() {
   return (
     <section className='py-20 bg-background'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <motion.div
-          className='text-center mb-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className='text-3xl sm:text-4xl font-bold font-[family-name:var(--font-syne)] mb-4'>
-            What I Bring to the Table
-          </h2>
-          <p className='text-lg text-muted max-w-2xl mx-auto'>
-            Proven track record building reliable systems at scale and leading
-            high-performing teams
-          </p>
-        </motion.div>
+        <SectionHeading
+          title='What I Bring to the Table'
+          description='Proven track record building reliable systems at scale and leading high-performing teams'
+        />
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {valueProps.map((prop, index) => (
             <motion.div
               key={prop.title}
-              className='p-8 rounded-2xl border border-border bg-background hover:border-primary/50 hover:shadow-lg transition-all group'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors'>
-                <prop.icon className='w-6 h-6 text-primary' />
-              </div>
+              <Card hover group className='h-full'>
+                <IconBadge icon={prop.icon} groupHover className='mb-6' />
 
-              <h3 className='text-xl font-bold mb-3'>{prop.title}</h3>
-              <p className='text-muted mb-6'>{prop.description}</p>
+                <h3 className='text-xl font-bold mb-3'>{prop.title}</h3>
+                <p className='text-muted mb-6'>{prop.description}</p>
 
-              <div className='flex flex-wrap gap-2'>
-                {prop.metrics.map((metric) => (
-                  <span
-                    key={metric}
-                    className='px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full'
-                  >
-                    {metric}
-                  </span>
-                ))}
-              </div>
+                <div className='flex flex-wrap gap-2'>
+                  {prop.metrics.map((metric) => (
+                    <span
+                      key={metric}
+                      className='px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full'
+                    >
+                      {metric}
+                    </span>
+                  ))}
+                </div>
+              </Card>
             </motion.div>
           ))}
         </div>

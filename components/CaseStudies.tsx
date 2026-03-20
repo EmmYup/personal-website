@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Brain, MessageSquare, Users, TrendingDown } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
+import { IconBadge } from '@/components/ui/IconBadge';
 
 const caseStudies = [
   {
@@ -83,79 +85,76 @@ const caseStudies = [
 export function CaseStudies() {
   return (
     <section className='mb-20'>
-      <h2 className='text-3xl font-bold font-[family-name:var(--font-syne)] mb-12'>
-        Case Studies
-      </h2>
+      <h2 className='text-3xl font-bold font-heading mb-12'>Case Studies</h2>
 
       <div className='space-y-12'>
         {caseStudies.map((study, index) => (
           <motion.div
             key={study.title}
-            className='p-8 rounded-2xl border border-border bg-background hover:border-primary/50 hover:shadow-lg transition-all'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
-            <div className='flex items-start gap-6'>
-              <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0'>
-                <study.icon className='w-6 h-6 text-primary' />
-              </div>
+            <Card hover>
+              <div className='flex items-start gap-6'>
+                <IconBadge icon={study.icon} className='flex-shrink-0' />
 
-              <div className='flex-1'>
-                <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
-                  <div>
-                    <h3 className='text-2xl font-bold mb-1'>{study.title}</h3>
-                    <p className='text-sm text-primary'>
-                      {study.company} • {study.period}
-                    </p>
+                <div className='flex-1'>
+                  <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
+                    <div>
+                      <h3 className='text-2xl font-bold mb-1'>{study.title}</h3>
+                      <p className='text-sm text-primary'>
+                        {study.company} • {study.period}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className='grid md:grid-cols-2 gap-6 mb-6'>
-                  <div>
-                    <h4 className='text-sm font-semibold text-muted mb-2'>
-                      Challenge
+                  <div className='grid md:grid-cols-2 gap-6 mb-6'>
+                    <div>
+                      <h4 className='text-sm font-semibold text-muted mb-2'>
+                        Challenge
+                      </h4>
+                      <p className='text-foreground'>{study.challenge}</p>
+                    </div>
+                    <div>
+                      <h4 className='text-sm font-semibold text-muted mb-2'>
+                        Solution
+                      </h4>
+                      <p className='text-foreground'>{study.solution}</p>
+                    </div>
+                  </div>
+
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-muted mb-3'>
+                      Results
                     </h4>
-                    <p className='text-foreground'>{study.challenge}</p>
+                    <div className='grid sm:grid-cols-2 gap-3'>
+                      {study.results.map((result) => (
+                        <div
+                          key={result}
+                          className='flex items-center gap-2 text-sm'
+                        >
+                          <div className='w-1.5 h-1.5 bg-success rounded-full' />
+                          <span>{result}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div>
-                    <h4 className='text-sm font-semibold text-muted mb-2'>
-                      Solution
-                    </h4>
-                    <p className='text-foreground'>{study.solution}</p>
-                  </div>
-                </div>
 
-                <div className='mb-6'>
-                  <h4 className='text-sm font-semibold text-muted mb-3'>
-                    Results
-                  </h4>
-                  <div className='grid sm:grid-cols-2 gap-3'>
-                    {study.results.map((result) => (
-                      <div
-                        key={result}
-                        className='flex items-center gap-2 text-sm'
+                  <div className='flex flex-wrap gap-2'>
+                    {study.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className='px-3 py-1 text-xs font-medium bg-border/50 rounded-full'
                       >
-                        <div className='w-1.5 h-1.5 bg-success rounded-full' />
-                        <span>{result}</span>
-                      </div>
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
-
-                <div className='flex flex-wrap gap-2'>
-                  {study.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className='px-3 py-1 text-xs font-medium bg-border/50 rounded-full'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </div>
+            </Card>
           </motion.div>
         ))}
       </div>

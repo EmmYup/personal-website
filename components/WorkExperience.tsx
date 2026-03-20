@@ -71,7 +71,7 @@ const experience = [
 export function WorkExperience() {
   return (
     <section>
-      <h2 className='text-3xl font-bold font-[family-name:var(--font-syne)] mb-12'>
+      <h2 className='text-3xl font-bold font-heading mb-12'>
         Full Experience Timeline
       </h2>
 
